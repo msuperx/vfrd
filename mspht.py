@@ -77,7 +77,6 @@ def start(message):
 def register(message):
     gmt = pygismeteo.Gismeteo()
     search_results = gmt.search.by_query(message.text.replace('/register ', ''))
-    print(search_results)
     if search_results:
         con = sqlite3.connect("uss.db")
         cur = con.cursor()
